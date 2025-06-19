@@ -1,42 +1,710 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
+
+
+
+/* ........................................................Header styles.......................................................... */
+
+
+   .section-header {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        .section-stock-ticker {
+          background-color: #f8f9fa;
+          border-bottom: 1px solid #e9ecef;
+          font-size: 12px;
+          padding: 8px 190px;
+          white-space: nowrap;
+          overflow-x: auto;
+        }
+        
+        .section-stock-item {
+          margin-right: 2rem;
+          color: #333;
+          font-weight: 500;
+        }
+        
+        .section-stock-negative {
+          color: #dc3545;
+        }
+        
+        .section-stock-positive {
+          color: #28a745;
+        }
+        
+        .section-main-header {
+          background: white;
+          border-bottom: 1px solid #e9ecef;
+          padding: 1rem 0;
+        }
+        
+        .section-search-box {
+          border: 1px solid #dee2e6;
+          border-radius: 20px;
+          padding: 8px 16px;
+          font-size: 14px;
+          width: 280px;
+        }
+        
+        .section-logo {
+          font-family: 'Times New Roman', serif;
+          font-size: 3.5rem;
+          font-weight: bold;
+          color: #000;
+          text-decoration: none;
+        }
+        
+        .section-nav-item {
+          color: #666;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 500;
+          padding: 8px 12px;
+          border-radius: 4px;
+          transition: all 0.2s;
+        }
+        
+        .section-nav-item:hover {
+          color: #333;
+          background-color: #f8f9fa;
+          text-decoration: none;
+        }
+        
+        .section-nav-item.active {
+          color: #dc3545;
+          border-bottom: 2px solid #dc3545;
+          border-radius: 0;
+        }
+        
+        .section-btn-connect {
+          background-color: #e9ecef;
+          border: none;
+          border-radius: 20px;
+          padding: 8px 20px;
+          font-size: 14px;
+          font-weight: 500;
+          color: #333;
+          margin-right: 5px;
+        }
+        
+        .section-btn-subscribe {
+          background-color: #ffd700;
+          border: none;
+          border-radius: 20px;
+          padding: 8px 20px;
+          font-size: 14px;
+          font-weight: 600;
+          color: #333;
+        }
+        
+        .section-icon-btn {
+          background: none;
+          border: none;
+          color: #666;
+          font-size: 18px;
+          margin: 0 -3px;
+        }
+        
+        .section-hamburger {
+          display: none;
+          background: none;
+          border: none;
+          font-size: 20px;
+        }
+        
+        .section-nav-mobile {
+          display: none;
+          background: white;
+          border-top: 1px solid #e9ecef;
+          padding: 1rem;
+        }
+        
+        .section-nav-mobile.show {
+          display: block;
+        }
+        
+        @media (max-width: 1200px) {
+          .section-nav-item {
+            font-size: 13px;
+            padding: 6px 8px;
+          }
+        }
+        
+        @media (max-width: 992px) {
+          .section-hamburger {
+            display: block;
+          }
+          
+          .section-nav-desktop {
+            display: none;
+          }
+          
+          .section-search-box {
+            width: 200px;
+          }
+          
+          .section-logo {
+            font-size: 2rem;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .section-stock-ticker {
+            font-size: 11px;  
+            padding: 8px 0;
+          }
+          
+          .section-stock-item {
+            margin-right: 1rem;
+          }
+          
+          .section-search-box {
+            width: 150px;
+            font-size: 13px;
+          }
+          
+          .section-logo {
+            font-size: 1.8rem;
+          }
+          
+          .section-btn-connect,
+          .section-btn-subscribe {
+            padding: 6px 12px;
+            font-size: 13px;
+          }
+        }
+        
+        .section-mobile-nav-scroll {
+          display: none;
+          overflow-x: auto;
+          white-space: nowrap;
+          padding: 12px 0;
+          border-bottom: 1px solid #e9ecef;
+          -webkit-overflow-scrolling: touch;
+        }
+        
+        .section-mobile-nav-scroll::-webkit-scrollbar {
+          display: none;
+        }
+        
+        .section-mobile-nav-item {
+          display: inline-block;
+          color: #666;
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 500;
+          padding: 8px 16px;
+          margin-right: 8px;
+          border-radius: 20px;
+          white-space: nowrap;
+          transition: all 0.2s;
+        }
+        
+        .section-mobile-nav-item:hover {
+          color: #333;
+          background-color: #f8f9fa;
+          text-decoration: none;
+        }
+        
+        .section-mobile-nav-item.active {
+          color: #dc3545;
+          background-color: #fff5f5;
+        }
+
+        @media (max-width: 576px) {
+          .section-main-header {
+            padding: 0.5rem 0;
+          }
+          
+          .section-search-box {
+            display: none;
+          }
+          
+          .section-logo {
+            font-size: 1.5rem;
+          }
+          
+          .section-icon-btn {
+            font-size: 16px;
+            margin: 0 4px;
+          }
+          
+          .section-nav-desktop {
+            display: none;
+          }
+          
+          .section-mobile-nav-scroll {
+            display: block;
+          }
+          
+          .section-btn-connect {
+            display: none;
+          }
+          
+          .section-mobile-layout {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+          }
+          
+          .section-mobile-left {
+            display: flex;
+            align-items: center;
+          }
+          
+          .section-mobile-center {
+            flex: 1;
+            text-align: center;
+          }
+          
+          .section-mobile-right {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .navItems{
+          margin-right: 8rem;
+          margin-left: 8rem;
+        }
+
+
+
+/* ..............................NewsArticleComponent styles.................................... */
+
+.component-news-container {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          background-color: #fff;
+          padding: 20px 0;
+        }
+        
+        .component-main-article {
+          position: relative;
+          margin-bottom: 20px;
+        }
+        
+        .component-article-image {
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+        
+        .component-category-badge {
+          background-color: #dc3545;
+          color: white;
+          font-size: 12px;
+          font-weight: 600;
+          padding: 4px 8px;
+          border-radius: 4px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          margin-bottom: 10px;
+          display: inline-block;
+        }
+        
+        .component-article-title {
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 1.3;
+          color: #000;
+          margin-bottom: 15px;
+        }
+        
+        .component-interview-badge {
+          background-color: #fff;
+          border: 2px solid #dc3545;
+          color: #dc3545;
+          font-size: 11px;
+          font-weight: 600;
+          padding: 3px 6px;
+          border-radius: 3px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          margin-bottom: 8px;
+          display: inline-block;
+        }
+        
+        .component-interview-text {
+          font-size: 16px;
+          font-weight: 500;
+          color: #333;
+          line-height: 1.4;
+          margin-bottom: 15px;
+        }
+        
+        .component-article-tags {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+        }
+        
+        .component-tag {
+          background-color: #f8f9fa;
+          border: 1px solid #dee2e6;
+          color: #666;
+          font-size: 12px;
+          padding: 4px 8px;
+          border-radius: 12px;
+          text-decoration: none;
+        }
+        
+        .component-tag:hover {
+          background-color: #e9ecef;
+          text-decoration: none;
+          color: #333;
+        }
+        
+        .component-sidebar {
+          background-color: #f8f9fa;
+          padding: 20px;
+          border-radius: 8px;
+          height: fit-content;
+        }
+        
+        .component-sidebar-title {
+          font-size: 16px;
+          font-weight: 700;
+          color: #333;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+        
+        .component-sidebar-item {
+          padding: 12px 0;
+          border-bottom: 1px solid #e9ecef;
+        }
+        
+        .component-sidebar-item:last-child {
+          border-bottom: none;
+        }
+        
+        .component-sidebar-meta {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 5px;
+        }
+        
+        .component-sidebar-time {
+          font-size: 12px;
+          color: #666;
+          font-weight: 500;
+        }
+        
+        .component-sidebar-category {
+          background-color: #dc3545;
+          color: white;
+          font-size: 10px;
+          font-weight: 600;
+          padding: 2px 6px;
+          border-radius: 3px;
+          text-transform: uppercase;
+          letter-spacing: 0.3px;
+        }
+        
+        .component-breaking-icon {
+          color: #dc3545;
+          font-size: 14px;
+        }
+        
+        .component-sidebar-title-text {
+          font-size: 14px;
+          color: #333;
+          line-height: 1.4;
+          font-weight: 500;
+        }
+        
+        .component-sidebar-title-text:hover {
+          color: #dc3545;
+          cursor: pointer;
+        }
+        
+        .component-continue-btn {
+          background-color: #dc3545;
+          color: white;
+          border: none;
+          padding: 12px 24px;
+          border-radius: 25px;
+          font-size: 14px;
+          font-weight: 600;
+          width: 100%;
+          margin-top: 20px;
+          transition: background-color 0.2s;
+        }
+        
+        .component-continue-btn:hover {
+          background-color: #c82333;
+        }
+        
+        .component-user-icon {
+          width: 24px;
+          height: 24px;
+          background-color: #dee2e6;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 12px;
+          color: #666;
+        }
+        .section1-width{
+          width: 80%;
+          margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+          .component-article-title {
+            font-size: 22px;
+          }
+          .section1-width{
+          width: 100%;
+        }
+          
+          .component-article-image {
+            height: 200px;
+          }
+          
+          .component-sidebar {
+            margin-top: 20px;
+          }
+          
+          .component-interview-text {
+            font-size: 14px;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .component-article-title {
+            font-size: 20px;
+          }
+          
+          .component-article-image {
+            height: 180px;
+          }
+          
+          .component-sidebar-title-text {
+            font-size: 13px;
+          }
+        }
+
+
+        /* .......................NewsList component styles................................... */
+
+
+         .newslist-container {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          margin-bottom: 20px;
+           width: 80%;
+          margin: 0 auto;
+        }
+        
+        .newslist-main-title {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 1.3;
+          color: #000;
+          margin-bottom: 20px;
+          text-decoration: none;
+        }
+        
+        .newslist-main-title:hover {
+          color: #dc3545;
+          text-decoration: none;
+        }
+        
+        .newslist-image {
+          width: 100%;
+          height: 120px;
+          object-fit: cover;
+          border-radius: 6px;
+        }
+        
+        .newslist-item {
+          margin-bottom: 15px;
+          padding-bottom: 15px;
+          border-bottom: 1px solid #f0f0f0;
+          position: relative;
+        }
+        
+        .newslist-item:last-of-type {
+          border-bottom: none;
+          margin-bottom: 20px;
+          padding-bottom: 0;
+        }
+        
+        .newslist-item-title {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1.4;
+          color: #333;
+          text-decoration: none;
+          display: block;
+          padding-left: 15px;
+          position: relative;
+        }
+        
+        .newslist-item-title:hover {
+          color: #dc3545;
+          text-decoration: none;
+        }
+        
+        .newslist-red-dot {
+          position: absolute;
+          left: 0;
+          top: 8px;
+          width: 6px;
+          height: 6px;
+          background-color: #dc3545;
+          border-radius: 50%;
+        }
+        
+        .newslist-category {
+          background-color: #dc3545;
+          color: white;
+          font-size: 11px;
+          font-weight: 600;
+          padding: 3px 6px;
+          border-radius: 3px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          margin-bottom: 5px;
+          display: inline-block;
+        }
+        
+        .newslist-footer {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-top: 20px;
+          padding-top: 15px;
+          border-top: 1px solid #f0f0f0;
+        }
+        
+        .newslist-bookmark {
+          width: 28px;
+          height: 28px;
+          border: 1px solid #dee2e6;
+          border-radius: 50%;
+          background-color: #f8f9fa;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: all 0.2s;
+        }
+        
+        .newslist-bookmark:hover {
+          background-color: #e9ecef;
+          border-color: #adb5bd;
+        }
+        
+        .newslist-bookmark-icon {
+          font-size: 14px;
+          color: #666;
+        }
+        
+        .newslist-tag {
+          background-color: #e9ecef;
+          color: #666;
+          font-size: 12px;
+          font-weight: 500;
+          padding: 6px 12px;
+          border-radius: 15px;
+          text-decoration: none;
+          transition: all 0.2s;
+        }
+        
+        .newslist-tag:hover {
+          background-color: #dee2e6;
+          color: #333;
+          text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+          .newslist-container {
+            padding: 15px;
+          }
+          
+          .newslist-main-title {
+            font-size: 20px;
+          }
+          
+          .newslist-item-title {
+            font-size: 15px;
+          }
+          
+          .newslist-image {
+            height: 100px;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .newslist-container {
+            padding: 12px;
+            margin-bottom: 15px;
+          }
+          
+          .newslist-main-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+          }
+          
+          .newslist-item-title {
+            font-size: 14px;
+          }
+          
+          .newslist-image {
+            height: 80px;
+          }
+          
+          .newslist-footer {
+            flex-wrap: wrap;
+            gap: 8px;
+          }
+          
+          .newslist-tag {
+            font-size: 11px;
+            padding: 4px 8px;
+          }
+        }
+
+
+
+
+/* ................................NewsBus component styles .................................... */
+
+
+.SwissZeroRateArticle h3,
+.SwissZeroRateArticle-title {
+  font-size: 1.5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
+.SwissZeroRateArticle .btn-light:hover,
+.SwissZeroRateArticle-tag:hover {
+  background-color: #f1f1f1;
+  color: #000;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.SwissZeroRateArticle-image {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}
+
+@media (max-width: 768px) {
+  .SwissZeroRateArticle-image{
+    width: 100%;
+    height: 100%;
   }
 }
