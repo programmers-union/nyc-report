@@ -28,6 +28,7 @@ const NewsListComponent = ({
 
       <div className="newslist-container">
         <div className="row col-lg-8">
+          <h1>checking</h1>
           {/* Main content */}
           <div className="col-md-8">
             <a href="#" className="newslist-main-title">
@@ -70,6 +71,7 @@ const NewsListComponent = ({
             <a key={index} href="#" className="newslist-tag">
               {tag}
             </a>
+            
           ))}
         </div>
       </div>
