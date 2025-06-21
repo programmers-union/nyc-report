@@ -27,10 +27,10 @@ const NewsListComponent = ({
 
 
       <div className="newslist-container">
-        <div className="row col-lg-8">
-          <h1>checking</h1>
+        <div className="row col-lg-12">
+       
           {/* Main content */}
-          <div className="col-md-8">
+          <div className="col-md-9">
             <a href="#" className="newslist-main-title">
               {mainTitle}
             </a>
@@ -51,7 +51,7 @@ const NewsListComponent = ({
           </div>
           
           {/* Image */}
-          <div className="col-md-4">
+          <div className="col-md-3" >
             <img 
               src={image} 
               alt="News" 
@@ -75,6 +75,8 @@ const NewsListComponent = ({
           ))}
         </div>
       </div>
+
+      
     </>
   );
 };

@@ -27,8 +27,8 @@ const NewsBus: React.FC<NewsBus> = ({
 }) => {
   return (
     <div className=" SwissZeroRateArticle py-4 ">
-      <div className="section1-width row align-items-start">
-        <div className="col-md-6">
+      <div className=" row align-items-start">
+        <div className="col-md-9">
           <p className="SwissZeroRateArticle-category text-danger fw-bold small mb-1">
             {category}
           </p>

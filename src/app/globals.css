@@ -360,7 +360,7 @@
         }
         
         .component-sidebar {
-          background-color: #f8f9fa;
+         
           padding: 20px;
           border-radius: 8px;
           height: fit-content;
@@ -501,11 +501,10 @@
          .newslist-container {
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
           background-color: #fff;
-          padding: 20px;
-          border-radius: 8px;
-          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+          padding: 20px 0px;
+       
           margin-bottom: 20px;
-           width: 80%;
+           width: 100%;
           margin: 0 auto;
         }
         
@@ -522,12 +521,20 @@
           color: #dc3545;
           text-decoration: none;
         }
+        .width-first{
+          width: 77%;
+          margin: 0 auto;
+        }
         
         .newslist-image {
           width: 100%;
-          height: 120px;
+          height: auto;
           object-fit: cover;
-          border-radius: 6px;
+         
+        }
+        .newslist-flex{
+          display: flex;
+          justify-content: end;
         }
         
         .newslist-item {
@@ -709,3 +716,129 @@
     height: 100%;
   }
 }
+
+
+/* ......................................................OpinionsLesPlusLues styles............................... */
+
+
+   .opinions-section {
+          background-color: #fff;
+          padding: 2rem 0;
+        }
+        
+        .opinions-title {
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: #000;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          margin-bottom: 2rem;
+          position: relative;
+        }
+        
+        .opinions-title::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          left: 0;
+          width: 60px;
+          height: 3px;
+          background: linear-gradient(90deg, #e91e63, #c2185b);
+        }
+        
+        .opinions-hero-image {
+          width: 280px;
+          height: 200px;
+          object-fit: cover;
+       
+          margin-bottom: 2rem;
+        }
+        
+        .opinions-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        
+        .opinions-item {
+          padding: 1.5rem 0;
+          border-bottom: 1px solid #f0f0f0;
+          transition: all 0.3s ease;
+        }
+        
+        .opinions-item:last-child {
+          border-bottom: none;
+        }
+        
+        .opinions-item:hover {
+          background-color: #fafafa;
+          cursor: pointer;
+        }
+        
+        .opinions-number {
+          font-size: 1.3rem;
+          font-weight: 300;
+          color: #e91e63;
+          margin-bottom: 0.5rem;
+          
+        }
+        
+        .opinions-category {
+          font-size: 0.75rem;
+          font-weight: 700;
+          color: #e91e63;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 0.5rem;
+        }
+        
+        .opinions-article-title {
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: #333;
+          line-height: 1.4;
+          margin: 0;
+          transition: color 0.3s ease;
+        }
+        
+        .opinions-item:hover .opinions-article-title {
+          color: #e91e63;
+        }
+        
+        @media (max-width: 768px) {
+          .opinions-section {
+            padding: 1.5rem 0;
+          }
+          
+          .opinions-title {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+          }
+          
+          .opinions-hero-image {
+            height: 150px;
+            margin-bottom: 1.5rem;
+          }
+          
+          .opinions-item {
+            padding: 1rem 0;
+          }
+          
+          .opinions-number {
+            font-size: 1.5rem;
+          }
+          
+          .opinions-article-title {
+            font-size: 1rem;
+          }
+        }
+        
+        @media (max-width: 576px) {
+          .opinions-hero-image {
+            height: 120px;
+          }
+          
+          .opinions-article-title {
+            font-size: 0.95rem;
+          }
+        }
