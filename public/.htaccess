@@ -1,0 +1,32 @@
+# Enable Rewrite Engine
+RewriteEngine On
+RewriteBase /
+
+##############################
+# Redirect to www domain
+##############################
+RewriteCond %{HTTP_HOST} ^nycreport\.org$ [NC]
+RewriteRule ^(.*)$ https://www.nycreport.org/$1 [L,R=301]
+
+##############################
+# Handle Next.js static export routing
+##############################
+
+# First, try to serve the exact file if it exists
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# For category/slug URLs, try category/slug.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/([^/]+)/?$ /$1/$2.html [L]
+
+# For single category URLs, try category.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ /$1.html [L]
+
+# Fallback to main index.html for any remaining routes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.html [L]

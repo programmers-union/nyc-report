@@ -4,12 +4,9 @@ const NewsArticleComponent = ({
   mainArticle = {
     category: "DÉCRYPTAGE",
     title: "Guerre commerciale : « C'est le moment d'assumer le rapport de force avec Washington »",
-    interview: {
-      label: "INTERVIEW",
-      text: "« Trop dépendant des États-Unis, le Canada veut se rapprocher de l'Europe »"
-    },
+    description:"sddddfdfd",
     image: "https://media.lesechos.com/api/v1/images/view/68538b6f43b10f3edb0e05ae/1280x720-webp/0150511217545-web-tete.webp",
-    tags: ["Europe"]
+    
   },
   sidebarTitle = "EN CONTINU",
   sidebarItems = [
@@ -64,7 +61,7 @@ const NewsArticleComponent = ({
                     {mainArticle.title}
                   </h1>
                   
-                  {mainArticle.interview && (
+                  {/* {mainArticle.interview && (
                     <div className="mb-3">
                       <span className="component-interview-badge">
                         {mainArticle.interview.label}
@@ -73,9 +70,9 @@ const NewsArticleComponent = ({
                         {mainArticle.interview.text}
                       </div>
                     </div>
-                  )}
+                  )} */}
                   
-                  <div className="component-article-tags">
+                  {/* <div className="component-article-tags">
                     <div className="component-user-icon">
                       👤
                     </div>
@@ -84,7 +81,7 @@ const NewsArticleComponent = ({
                         {tag}
                       </a>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
