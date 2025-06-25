@@ -1,10 +1,6 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import NewsArticleComponent from "@/components/NewsArticleComponent ";
-import NewsListComponent from "@/components/NewsList";
 import NewsBus from "@/components/NewsBus";
 import OpinionsLesPlusLues from "@/components/OpinionsLesPlusLues ";
-import NewsCarouselDemo from "@/components/NewsCard ";
 import NewsCard from "@/components/NewsCard ";
 import NewsSection from "@/components/NewsSection";
 import politicsData from '../../public/data/politics.json';
@@ -31,6 +27,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={politicsData[1].image}
             category={politicsData[1].category}
+            slug={politicsData[1].slug}
           />
           <NewsBus
             title={businessData[0].title}
@@ -38,6 +35,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={businessData[0].image}
             category={businessData[0].category}
+            slug={businessData[0].slug}
           />
           <NewsBus
             title={politicsData[2].title}
@@ -45,6 +43,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={politicsData[2].image}
             category={politicsData[2].category}
+            slug={politicsData[2].slug}
           />
         </div>
         <div className="col-lg-4">
@@ -102,6 +101,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={politicsData[3].image}
             category={politicsData[3].category}
+            slug={politicsData[3].slug}
           />
           <NewsBus
             title={businessData[1].title}
@@ -109,6 +109,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={businessData[1].image}
             category={businessData[1].category}
+            slug={businessData[1].slug}
           />
           <NewsBus
             title={politicsData[4].title}
@@ -116,6 +117,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={politicsData[4].image}
             category={politicsData[4].category}
+            slug={politicsData[4].slug}
           />
         </div>
         <div className="col-lg-4">
@@ -133,6 +135,7 @@ export default function Home() {
     imageAlt: technologyData[0].slug,
     category: technologyData[0].category,
     title: technologyData[0].title,
+    slug:technologyData[0].slug
     
   }}
   
@@ -145,7 +148,8 @@ export default function Home() {
     image: technologyData[1].image,
     imageAlt:technologyData[1].slug,
     category:technologyData[1].category,
-    title: technologyData[1].title
+    title: technologyData[1].title,
+    slug:technologyData[1].slug
     
   }}
  
@@ -159,6 +163,7 @@ export default function Home() {
     imageAlt:technologyData[2].slug,
     category: technologyData[2].category,
     title: technologyData[2].title,
+    slug:technologyData[2].slug
     
   }}
  
@@ -174,6 +179,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={businessData[2].image}
             category={businessData[2].category}
+            slug={businessData[2].slug}
           />
           <NewsBus
             title={businessData[3].title}
@@ -181,6 +187,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={businessData[3].image}
             category={businessData[3].category}
+            slug={businessData[3].slug}
 
           />
           <NewsBus
@@ -189,6 +196,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={technologyData[0].image}
             category={technologyData[0].category}
+            slug={technologyData[0].slug}
 
           />
         </div>
@@ -204,6 +212,7 @@ export default function Home() {
             isPremium={true}
           imageUrl={technologyData[1].image}
           category={technologyData[1].category}
+          slug={technologyData[1].slug}
           />
           <NewsBus
             title={technologyData[2].title}
@@ -211,6 +220,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={technologyData[2].image}
             category={technologyData[2].category}
+            slug={technologyData[2].slug}
           />
           <NewsBus
             title={sportsData[0].title}
@@ -218,6 +228,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={sportsData[0].image}
             category={sportsData[0].category}
+            slug={sportsData[0].slug}
           />
         </div>
 
@@ -230,7 +241,7 @@ export default function Home() {
             number="01"
             category={politicsData[0].category}
             title={politicsData[0].title}
-            slug={healthData[0].slug}
+            slug={politicsData[0].slug}
           />
         </div>
 
@@ -264,6 +275,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={sportsData[1].image}
             category={sportsData[1].category}
+            slug={sportsData[1].slug}
           />
           <NewsBus
             title={sportsData[2].title}
@@ -271,6 +283,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={sportsData[2].image}
             category={sportsData[2].category}
+            slug={sportsData[2].slug}
           />
           <NewsBus
             title={scienceData[0].title}
@@ -278,6 +291,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={scienceData[0].image}
             category={scienceData[0].category}
+            slug={scienceData[0].slug}
           />
         </div>
 
@@ -290,6 +304,7 @@ export default function Home() {
             isPremium={true}
             imageUrl={scienceData[1].image}
             category={scienceData[1].category}
+            slug={scienceData[1].slug}
           />
           {/* <NewsBus
             title="La Suisse bascule dans les taux zéro"
@@ -315,6 +330,7 @@ export default function Home() {
     imageAlt: scienceData[0].slug,
     category: scienceData[0].category,
     title: scienceData[0].title,
+    slug:scienceData[0].slug
   
   }}
   
@@ -328,6 +344,7 @@ export default function Home() {
     imageAlt:scienceData[1].slug,
     category:scienceData[1].category,
     title:scienceData[1].title,
+    slug:scienceData[1].slug
    
   }}
   
@@ -341,6 +358,7 @@ export default function Home() {
     imageAlt: scienceData[3].slug,
     category: scienceData[3].category,
     title: scienceData[3].title,
+    slug:scienceData[3].slug
     
   }}
  
@@ -356,6 +374,7 @@ export default function Home() {
     imageAlt: businessData[3].slug,
     category: businessData[3].category,
     title: businessData[3].title,
+    slug:businessData[3].slug
     
   }}
 
@@ -368,7 +387,8 @@ export default function Home() {
     image: businessData[2].image,
     imageAlt:businessData[2].slug,
     category:businessData[2].category,
-    title: businessData[2].title
+    title: businessData[2].title,
+    slug:businessData[2].slug
 
   }}
   
@@ -381,7 +401,8 @@ export default function Home() {
      image: businessData[1].image,
     imageAlt:businessData[1].slug,
     category:businessData[1].category,
-    title: businessData[1].title
+    title: businessData[1].title,
+    slug:businessData[1].slug
    
   }}
 

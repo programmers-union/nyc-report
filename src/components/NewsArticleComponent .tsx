@@ -1,14 +1,41 @@
-import React from 'react';
+'use client';
 
-const NewsArticleComponent = ({ 
-  mainArticle = {
-    category: "DÉCRYPTAGE",
-    title: "Guerre commerciale : « C'est le moment d'assumer le rapport de force avec Washington »",
-    description:"sddddfdfd",
-    image: "https://media.lesechos.com/api/v1/images/view/68538b6f43b10f3edb0e05ae/1280x720-webp/0150511217545-web-tete.webp",
-    
-  },
-  sidebarTitle = "EN CONTINU",
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+
+/* ─────────────────────────────────────────────── */
+/*  Types                                         */
+/* ─────────────────────────────────────────────── */
+
+interface SidebarItem {
+  time: string;
+  title: string;
+  category?: string;
+  isBreaking?: boolean;
+  slug?: string;           // NEW → lets you link each sidebar article
+}
+
+interface NewsArticleProps {
+  mainArticle: {
+    title: string;
+    image: string;
+    category?: string;
+    description?: string;
+    slug: string;          // NEW → required for the main detail link
+  };
+  sidebarTitle?: string;
+  sidebarItems?: SidebarItem[];
+  continueButton?: string;
+}
+
+/* ─────────────────────────────────────────────── */
+/*  Component                                     */
+/* ─────────────────────────────────────────────── */
+
+const NewsArticleComponent: React.FC<NewsArticleProps> = ({
+  mainArticle,
+  sidebarTitle = 'EN CONTINU',
   sidebarItems = [
     {
       time: "10:30",
@@ -33,96 +60,93 @@ const NewsArticleComponent = ({
       title: "Le département de Saône-et-Loire va équiper tous ses collèges en vidéoprotection"
     }
   ],
-  continueButton = "Toute l'actualité en continu"
+  continueButton = "Toute l'actualité en continu",
 }) => {
+  /* Helper for the main article URL */
+  const mainHref = `/${(mainArticle.category ?? '').toLowerCase()}/${mainArticle.slug}`;
 
   return (
-    <>
-
-
-      <div className="component-news-container">
-        <div className="container-fluid">
-          <div className="row section1-width border-bottom">
-            {/* Main Article */}
-            <div className="col-lg-8 col-md-7 border-end">
+    <div className="component-news-container">
+      <div className="container-fluid">
+        <div className="row section1-width border-bottom">
+          {/* ─── Main Article ─────────────────────────────── */}
+          <div className="col-lg-8 col-md-7 border-end">
+            <Link href={mainHref} className="text-decoration-none text-reset">
               <div className="component-main-article">
-                <img 
-                  src={mainArticle.image} 
-                  alt="Article" 
+                <img
+                  src={mainArticle.image}
+                  alt={mainArticle.title}
+                  width={1280}
+                  height={720}
                   className="component-article-image"
-                />
-                
-                <div className="mt-3">
-                  <span className="component-category-badge">
-                    {mainArticle.category}
-                  </span>
                   
+                />
+
+                <div className="mt-3">
+                  {mainArticle.category && (
+                    <span className="component-category-badge">
+                      {mainArticle.category}
+                    </span>
+                  )}
+
                   <h1 className="component-article-title">
                     {mainArticle.title}
                   </h1>
-                  
-                  {/* {mainArticle.interview && (
-                    <div className="mb-3">
-                      <span className="component-interview-badge">
-                        {mainArticle.interview.label}
-                      </span>
-                      <div className="component-interview-text">
-                        {mainArticle.interview.text}
-                      </div>
-                    </div>
-                  )} */}
-                  
-                  {/* <div className="component-article-tags">
-                    <div className="component-user-icon">
-                      👤
-                    </div>
-                    {mainArticle.tags && mainArticle.tags.map((tag, index) => (
-                      <a key={index} href="#" className="component-tag">
-                        {tag}
-                      </a>
-                    ))}
-                  </div> */}
                 </div>
               </div>
-            </div>
-            
-            {/* Sidebar */}
-            <div className="col-lg-4 col-md-5">
-              <div className="component-sidebar">
-                <h2 className="component-sidebar-title">
-                  {sidebarTitle}
-                </h2>
-                
-                {sidebarItems.map((item, index) => (
-                  <div key={index} className="component-sidebar-item">
-                    <div className="component-sidebar-meta">
-                      <span className="component-sidebar-time">
-                        {item.time}
-                      </span>
-                      {item.category && (
-                        <span className="component-sidebar-category">
-                          {item.category}
+            </Link>
+          </div>
+
+          {/* ─── Sidebar ─────────────────────────────────── */}
+          <div className="col-lg-4 col-md-5">
+            <div className="component-sidebar">
+              <h2 className="component-sidebar-title">{sidebarTitle}</h2>
+
+              {sidebarItems.map((item, idx) => {
+                const itemHref =
+                  item.slug && item.category
+                    ? `/${item.category.toLowerCase()}/${item.slug}`
+                    : '#'; // fall back to "#" if no slug provided
+
+                return (
+                  <Link
+                    key={idx}
+                    href={itemHref}
+                    className="text-reset text-decoration-none"
+                  >
+                    <div className="component-sidebar-item">
+                      <div className="component-sidebar-meta">
+                        <span className="component-sidebar-time">
+                          {item.time}
                         </span>
-                      )}
-                      {item.isBreaking && (
-                        <span className="component-breaking-icon">⚡</span>
-                      )}
+
+                        {item.category && (
+                          <span className="component-sidebar-category">
+                            {item.category}
+                          </span>
+                        )}
+
+                        {item.isBreaking && (
+                          <span className="component-breaking-icon">⚡</span>
+                        )}
+                      </div>
+
+                      <div className="component-sidebar-title-text">
+                        {item.title}
+                      </div>
                     </div>
-                    <div className="component-sidebar-title-text">
-                      {item.title}
-                    </div>
-                  </div>
-                ))}
-                
-                <button className="component-continue-btn">
-                  {continueButton}
-                </button>
-              </div>
+                  </Link>
+                );
+              })}
+
+              <button className="component-continue-btn">
+                {continueButton}
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

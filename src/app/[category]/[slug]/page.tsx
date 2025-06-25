@@ -5,6 +5,7 @@ import sportsData from '../../../../public/data/sports.json';
 import scienceData from '../../../../public/data/science.json';
 import healthData from '../../../../public/data/health.json';
 import ArticleHero from '@/components/ArticleHero';
+import WandaVazquezArticle from '@/components/WandaVazquezArticle';
 import { Metadata } from 'next';
 
 type Article = {
@@ -241,6 +242,12 @@ export default async function DetailPage({ params }: PageProps) {
     return <div className="p-4">No article found for slug: {slug}</div>;
   }
 
+  // Check if this is the Wanda Vázquez article
+  if (slug === 'wanda-vazquez-bribery-case-dismissed-campaign-violation') {
+    return <WandaVazquezArticle article={article} />;
+  }
+
+  // Default rendering for other articles
   return (
     <ArticleHero
       title={article.title}
