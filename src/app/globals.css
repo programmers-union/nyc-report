@@ -524,7 +524,7 @@
         }
         .width-first{
           width: 77%;
-          /* margin: 0 auto; */
+          margin: 0 auto;
         }
         
         .newslist-image {
@@ -1140,7 +1140,7 @@
         /* ...................... Footer styles .......................................... */
 
           .footer {
-          background: #f5f5f5;
+          background: rgb(245, 245, 245);;
           padding-top: 40px;
           font-family: Arial, sans-serif;
         }
