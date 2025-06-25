@@ -524,7 +524,7 @@
         }
         .width-first{
           width: 77%;
-          margin: 0 auto;
+          /* margin: 0 auto; */
         }
         
         .newslist-image {
