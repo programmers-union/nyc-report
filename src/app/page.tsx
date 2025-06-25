@@ -15,7 +15,7 @@ import healthData from '../../public/data/health.json';
 
 export default function Home() {
   return (
-    <div className="container ">
+    <div className="container width-first">
       <NewsArticleComponent mainArticle={politicsData[0]} />
 
 
