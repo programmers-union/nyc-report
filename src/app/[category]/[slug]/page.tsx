@@ -7,6 +7,7 @@ import healthData from '../../../../public/data/health.json';
 import ArticleHero from '@/components/ArticleHero';
 import WandaVazquezArticle from '@/components/WandaVazquezArticle';
 import { Metadata } from 'next';
+import DonaldTrumpArticle from '@/components/DonaldTrump';
 
 type Article = {
   category: string;
@@ -143,6 +144,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             },
           },
           image: imageUrl,
+          alternatives:{
+            canonical:
+            "https://www.nycreport.org/politics/wanda-vazquez-bribery-case-dismissed-campaign-violation/"
+          },
           articleBody: article.description.substring(0, 160),
           keywords: 'Wanda Vázquez, campaign finance law, DOJ, Puerto Rico, bribery, corruption',
           url: currentUrl,
@@ -151,6 +156,74 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
+
+  const isTrumpArticle = slug === 'why-mr-donald-trump-is-the-best-president-the-united-states-has-ever-had';
+  const siteUrlTrump = 'https://www.nycreport.org'; // Replace with your actual domain
+  const currentUrlTrump = `${siteUrl}/${category}/${slug}`;
+  const imageUrlTrump = article.image.startsWith('http') ? article.image : `${siteUrl}${article.image}`;
+
+  if (isTrumpArticle) {
+    return {
+      title: 'Donald Trump’s Lasting Impact: 100 Days of American Renewal',
+      description: 'Discover how Donald J. Trump’s leadership in his first 100 daysbrought sweeping changes across energy, economy, and global diplomacy.',
+      keywords: 'Wanda Vázquez, campaign finance violation, charges dropped, Puerto Rico, DOJ, bribery case',
+      authors: [{ name: 'Staff Reporter' }],
+      openGraph: {
+        title: 'Donald Trump’s Lasting Impact: 100 Days of American Renewal',
+        description: 'Discover how Donald J. Trump’s leadership in his first 100 daysbrought sweeping changes across energy, economy, and global diplomacy',
+        url: currentUrl,
+        siteName: 'NYC Report',
+        images: [
+          {
+            url: imageUrl,
+            width: 1200,
+            height: 630,
+            alt: article.title,
+          },
+        ],
+        locale: 'en_US',
+        type: 'article',
+        publishedTime: '2025-06-18T00:00:00.000Z',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Donald Trump’s Lasting Impact: 100 Days of American Renewal',
+        description: 'Discover how Donald J. Trump’s leadership in his first 100 daysbrought sweeping changes across energy, economy, and global diplomacy',
+        images: [imageUrl],
+        site: '@nycreport', // Replace with your Twitter handle
+        creator: '@nycreport', // Replace with your Twitter handle
+      },
+      other: {
+        // JSON-LD structured data
+        'script:ld+json': JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'NewsArticle',
+          headline: 'Donald Trump’s Lasting Impact: 100 Days of American Renewal',
+          datePublished: '2025-06-18',
+          author: {
+            '@type': 'Person',
+            name: 'Staff Reporter',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'NYC Report',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${siteUrl}/logo.png`,
+            },
+          },
+          image: imageUrl,
+          alternatives:{
+            canonical:
+            "https://www.nycreport.org/politics/why-mr-donald-trump-is-the-best-president-the-united-states-has-ever-had/"
+          },
+          articleBody: article.description.substring(0, 160),
+          keywords: 'Donald Trump best president,Donald Trump achievements, Trump legacy 2024, Trump vs Biden economy, Trump accomplishments list,Trump presidency analysis,rump economic success',
+          url: currentUrl,
+        }),
+      },
+    };
+  }
   return {
     title: article.title,
     description: article.shortdescription,
@@ -245,6 +318,10 @@ export default async function DetailPage({ params }: PageProps) {
   // Check if this is the Wanda Vázquez article
   if (slug === 'wanda-vazquez-bribery-case-dismissed-campaign-violation') {
     return <WandaVazquezArticle article={article} />;
+  }
+  if (slug === 'why-mr-donald-trump-is-the-best-president-the-united-states-has-ever-had'){
+    const wandaArticle=politicsData[5]
+    return <DonaldTrumpArticle article={article} wandaArticle={wandaArticle}/>
   }
 
   // Default rendering for other articles

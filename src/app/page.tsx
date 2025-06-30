@@ -9,12 +9,63 @@ import technologyData from '../../public/data/technology.json';
 import sportsData from '../../public/data/sports.json';
 import scienceData from '../../public/data/science.json'
 import healthData from '../../public/data/health.json';
-
+import Script from "next/script";
 
 
 
 export default function Home() {
   return (
+    <main>
+    <Script
+    id="structured-data-webpage"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              name: "Business,Politics, Technology,Health,Science,Sports",
+              description:
+                "Stay updated with breaking news, global business insights, and financial strategies. Explore business investments, market trends, and analysis.",
+              url: "https://www.nycreport.org/",
+              speakable: {
+                "@type": "SpeakableSpecification",
+                cssSelector: ["h1"],
+              },
+            },
+            null,
+            2
+          ),
+        }}
+      />
+    
+     <Script
+        id="structured-data-itemlist"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            {
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              url: "https://www.nycreport.org/",
+              numberOfItems: 5,
+              itemListOrder: "http://schema.org/ItemListOrderAscending",
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "https://www.nycreport.org/",
+              },
+
+           
+            },
+            null,
+            2
+          ),
+        }}
+      />
+  
+  
     <div className="container">
       <NewsArticleComponent mainArticle={politicsData[0]} />
 
@@ -96,12 +147,12 @@ export default function Home() {
       <div className="row width-first">
         <div className="col-lg-8">
           <NewsBus
-            title={politicsData[3].title}
-            shortdescription={politicsData[3].shortdescription ?? ''}
+            title={politicsData[6].title}
+            shortdescription={politicsData[6].shortdescription ?? ''}
             isPremium={true}
-            imageUrl={politicsData[3].image}
-            category={politicsData[3].category}
-            slug={politicsData[3].slug}
+            imageUrl={politicsData[6].image}
+            category={politicsData[6].category}
+            slug={politicsData[6].slug}
           />
           <NewsBus
             title={businessData[1].title}
@@ -410,5 +461,7 @@ export default function Home() {
   </div>
 </div>
     </div>
+      </main>
   );
 }
+

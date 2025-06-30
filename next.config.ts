@@ -2,9 +2,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  trailingSlash: false,
+  trailingSlash: true,
   /* config options here */
+assetPrefix: '',
+}
 
-};
 
 export default nextConfig;
