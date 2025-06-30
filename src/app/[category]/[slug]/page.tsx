@@ -171,7 +171,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       openGraph: {
         title: 'Donald Trump’s Lasting Impact: 100 Days of American Renewal',
         description: 'Discover how Donald J. Trump’s leadership in his first 100 daysbrought sweeping changes across energy, economy, and global diplomacy',
-        url: currentUrl,
+        url: currentUrlTrump,
         siteName: 'NYC Report',
         images: [
           {
@@ -189,7 +189,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         card: 'summary_large_image',
         title: 'Donald Trump’s Lasting Impact: 100 Days of American Renewal',
         description: 'Discover how Donald J. Trump’s leadership in his first 100 daysbrought sweeping changes across energy, economy, and global diplomacy',
-        images: [imageUrl],
+        images: [imageUrlTrump],
         site: '@nycreport', // Replace with your Twitter handle
         creator: '@nycreport', // Replace with your Twitter handle
       },
@@ -209,7 +209,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             name: 'NYC Report',
             logo: {
               '@type': 'ImageObject',
-              url: `${siteUrl}/logo.png`,
+              url: `${siteUrlTrump}/logo.png`,
             },
           },
           image: imageUrl,
