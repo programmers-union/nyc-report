@@ -66,7 +66,7 @@ export default function Home() {
       />
   
   
-    <div className="container">
+    <div className="container py-5">
       <NewsArticleComponent mainArticle={politicsData[0]} />
 
 

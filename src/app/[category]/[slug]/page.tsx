@@ -163,6 +163,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const imageUrlTrump = article.image.startsWith('http') ? article.image : `${siteUrl}${article.image}`;
 
   if (isTrumpArticle) {
+    console.log("trumpppppppp")
     return {
       title: 'Donald Trump’s Lasting Impact: 100 Days of American Renewal',
       description: 'Discover how Donald J. Trump’s leadership in his first 100 daysbrought sweeping changes across energy, economy, and global diplomacy.',
@@ -219,7 +220,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           },
           articleBody: article.description.substring(0, 160),
           keywords: 'Donald Trump best president,Donald Trump achievements, Trump legacy 2024, Trump vs Biden economy, Trump accomplishments list,Trump presidency analysis,rump economic success',
-          url: currentUrl,
+          url: currentUrlTrump,
         }),
       },
     };

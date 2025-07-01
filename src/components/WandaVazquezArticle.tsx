@@ -15,7 +15,7 @@ interface WandaVazquezArticleProps {
 
 const WandaVazquezArticle: React.FC<WandaVazquezArticleProps> = ({ article }) => {
   return (
-    <div className="wanda-article-container">
+    <div className="wanda-article-container py-5">
       <div className="row">
         <div className="col-12">
           {/* Header Section */}
