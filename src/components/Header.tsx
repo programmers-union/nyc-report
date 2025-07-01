@@ -86,7 +86,7 @@ const stockData = [
               </div>
               <div className="section-mobile-right">
                 <button className="section-icon-btn">🔍</button>
-                <button className="section-hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>☰</button>
+                {/* <button className="section-hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>☰</button> */}
               </div>
             </div>
           </div>

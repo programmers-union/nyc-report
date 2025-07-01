@@ -10,8 +10,44 @@ import sportsData from '../../public/data/sports.json';
 import scienceData from '../../public/data/science.json'
 import healthData from '../../public/data/health.json';
 import Script from "next/script";
+import { title } from "process";
+import CategoryPage from "./[category]/page";
 
+const data1 = [
+  {
+    id: '01',
+    category: 'Opinion',
+    title: "Core Scientific Stock Jumps 33% Amid Buyout Talks With CoreWeave"
+  },
+  {
+    id: '02',
+    category: 'Opinion',
+    title: "Climate inaction or the tragedy of an obsolete mental model"
+  },
+  {
+    id: '03',
+    category: 'Opinion',
+    title: "Republican Senators Unveil Framework for U.S. Crypto Regulation"
+  }
+];
 
+const data2=[
+  {
+    id:'01',
+    category:"Opinion",
+    title:"A Political Shock in New York, and Democrats Demand Details on Iran Strike"
+  },
+  {
+    id:'02',
+    category:"Opinion",
+    title:"Suspect Mounted Deadly Firefighter Ambush From a Tree, Sheriff Says"
+  },
+  {
+    id:'03',
+    category:"Opinion",
+    title:"Victim of Boulder Firebombing Attack Dies of Wounds"
+  }
+]
 
 export default function Home() {
   return (
@@ -100,7 +136,7 @@ export default function Home() {
           />
         </div>
         <div className="col-lg-4">
-          <OpinionsLesPlusLues />
+          <OpinionsLesPlusLues opinions={data1} />
         </div>
       </div>
       <div className="row">
@@ -174,7 +210,7 @@ export default function Home() {
           />
         </div>
         <div className="col-lg-4">
-          <OpinionsLesPlusLues />
+          <OpinionsLesPlusLues opinions={data2} />
           
         </div>
       </div>
