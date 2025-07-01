@@ -35,32 +35,33 @@ interface NewsArticleProps {
 
 const NewsArticleComponent: React.FC<NewsArticleProps> = ({
   mainArticle,
-  sidebarTitle = 'EN CONTINU',
-  sidebarItems = [
-    {
-      time: "10:30",
-      category: "DÉCRYPTAGE",
-      title: "La Suisse bascule dans les taux zéro",
-      isBreaking: true
-    },
-    {
-      time: "10:15",
-      title: "L'agglomération mulhousienne remplace la ZFE par une charte « Air et santé »"
-    },
-    {
-      time: "10:15",
-      title: "La communauté d'agglomération de Cergy-Pontoise fait sa révolution du tri"
-    },
-    {
-      time: "10:12",
-      title: "Île-de-France Mobilités lance une ligne de covoiturage au plateau de Saclay"
-    },
-    {
-      time: "10:08",
-      title: "Le département de Saône-et-Loire va équiper tous ses collèges en vidéoprotection"
-    }
-  ],
-  continueButton = "Toute l'actualité en continu",
+ sidebarTitle = 'LIVE UPDATES',
+sidebarItems = [
+  {
+    time: "10:30",
+    category: "INSIGHT",
+    title: "Ex-Barclays Chief Jes Staley Loses Appeal Against U.K. Finance-Sector Ban",
+    isBreaking: true
+  },
+  {
+    time: "10:15",
+    title: "Brazil’s Supreme Court Rules Social Media Platforms Can Be Held Liable for User Content"
+  },
+  {
+    time: "10:15",
+    title: "Global Markets Climb as U.S. Stocks Near Record Highs"
+  },
+  {
+    time: "10:12",
+    title: "GE Appliances to Move Washing Machine Production from China to Kentucky with $490 Million Investment"
+  },
+  {
+    time: "10:08",
+    title: "Palestinian Activist Mahmoud Khalil Rallies with Supporters in NYC Following Release"
+  }
+]
+,
+  continueButton = "continue",
 }) => {
   /* Helper for the main article URL */
   const mainHref = `/${(mainArticle.category ?? '').toLowerCase()}/${mainArticle.slug}`;

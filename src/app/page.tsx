@@ -66,6 +66,8 @@ export default function Home() {
       />
   
   
+
+
     <div className="container py-5">
       <NewsArticleComponent mainArticle={politicsData[0]} />
 
@@ -350,10 +352,10 @@ export default function Home() {
           <div className="row width-first">
         <div className="col-lg-8">
           <NewsBus
-            title={scienceData[1].title}
-            shortdescription={scienceData[1].shortdescription ?? ''}
+            title={scienceData[4].title}
+            shortdescription={scienceData[4].shortdescription ?? ''}
             isPremium={true}
-            imageUrl={scienceData[1].image}
+            imageUrl={scienceData[4].image}
             category={scienceData[1].category}
             slug={scienceData[1].slug}
           />
@@ -461,7 +463,10 @@ export default function Home() {
   </div>
 </div>
     </div>
+    
       </main>
+        
   );
 }
 
+ 

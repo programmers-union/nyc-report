@@ -8,13 +8,14 @@ const LesEchosHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
-  const stockData = [
-    { name: "Cac 40", value: "7656,12", change: "-0.36%", changeType: "negative" },
-    { name: "Dow Jones", value: "42171,68", change: "-0.10%", changeType: "negative" },
-    { name: "Nasdaq composite", value: "19546,27", change: "+0.13%", changeType: "positive" },
-    { name: "Nikkei 225", value: "38885,15", change: "+0.90%", changeType: "positive" },
-    { name: "Pétrole Brent", value: "76,48", change: "+0.53%", changeType: "positive" },
-  ];
+const stockData = [
+  { name: "CAC 40", value: "7,656.12", change: "-0.36%", changeType: "negative" },
+  { name: "Dow Jones", value: "42,171.68", change: "-0.10%", changeType: "negative" },
+  { name: "Nasdaq Composite", value: "19,546.27", change: "+0.13%", changeType: "positive" },
+  { name: "Nikkei 225", value: "38,885.15", change: "+0.90%", changeType: "positive" },
+  { name: "Brent Crude Oil", value: "76.48", change: "+0.53%", changeType: "positive" },
+];
+
 
   const navItems = [
     { label: "Business", slug: "business" },
@@ -81,7 +82,7 @@ const LesEchosHeader = () => {
                 <button className="section-btn-subscribe">Subscribe</button>
               </div>
               <div className="section-mobile-center">
-                <a href="#" className="section-logo">NYC REPORT</a>
+                <a href="/" className="section-logo">NYC REPORT</a>
               </div>
               <div className="section-mobile-right">
                 <button className="section-icon-btn">🔍</button>

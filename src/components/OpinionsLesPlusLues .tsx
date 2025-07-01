@@ -1,23 +1,24 @@
 import React from 'react';
 
 const OpinionsLesPlusLues = () => {
-  const opinions = [
-    {
-      id: '01',
-      category: 'CHRONIQUE',
-      title: "En France, la politique est en train de couler l'économie 😔"
-    },
-    {
-      id: '02',
-      category: 'CHRONIQUE',
-      title: "L'inaction climatique ou la tragédie d'un modèle mental obsolète"
-    },
-    {
-      id: '03',
-      category: 'CHRONIQUE',
-      title: "Stratégie énergétique de la France : pour en finir avec le complexe du bon élève"
-    }
-  ];
+const opinions = [
+  {
+    id: '01',
+    category: 'Opinion',
+    title: "Core Scientific Stock Jumps 33% Amid Buyout Talks With CoreWeave"
+  },
+  {
+    id: '02',
+    category: 'Opinion',
+    title: "Climate inaction or the tragedy of an obsolete mental model"
+  },
+  {
+    id: '03',
+    category: 'Opinion',
+    title: "Republican Senators Unveil Framework for U.S. Crypto Regulation"
+  }
+];
+
 
   return (
     <>
@@ -25,7 +26,7 @@ const OpinionsLesPlusLues = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h2 className="opinions-title">Opinions Les Plus Lues</h2>
+              <h2 className="opinions-title">Most Read Opinions</h2>
               
               <img 
                 src="https://media.lesechos.com/api/v1/images/view/6854f2a11c9e0ae9b202b660/300x200-webp/0150537597024-web-tete.webp"
