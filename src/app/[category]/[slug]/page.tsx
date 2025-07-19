@@ -88,7 +88,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     };
   }
 
-  const isWandaArticle = slug === 'wanda-vazquez-bribery-case-dismissed-campaign-violation';
+  const isWandaArticle = slug === 'wanda-vazquez-bribery-case-collapses';
   const siteUrl = 'https://www.nycreport.org'; // Replace with your actual domain
   const currentUrl = `${siteUrl}/${category}/${slug}`;
   const imageUrl = article.image.startsWith('http') ? article.image : `${siteUrl}${article.image}`;
@@ -146,7 +146,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           image: imageUrl,
           alternatives:{
             canonical:
-            "https://www.nycreport.org/politics/wanda-vazquez-bribery-case-dismissed-campaign-violation/"
+            "https://www.nycreport.org/politics/wanda-vazquez-bribery-case-collapses/"
           },
           articleBody: article.description.substring(0, 160),
           keywords: 'Wanda Vázquez, campaign finance law, DOJ, Puerto Rico, bribery, corruption',
@@ -317,7 +317,7 @@ export default async function DetailPage({ params }: PageProps) {
   }
 
   // Check if this is the Wanda Vázquez article
-  if (slug === 'wanda-vazquez-bribery-case-dismissed-campaign-violation') {
+  if (slug === 'wanda-vazquez-bribery-case-collapses') {
     return <WandaVazquezArticle article={article} />;
   }
   if (slug === 'why-mr-donald-trump-is-the-best-president-the-united-states-has-ever-had'){

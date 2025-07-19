@@ -8,7 +8,7 @@ module.exports = {
   transform: async (config, path) => {
     const now = new Date().toISOString();
     const base = config.siteUrl;
-    const WANDA_SLUG = "/politics/wanda-vazquez-bribery-case-dismissed-campaign-violation";
+    const WANDA_SLUG = "/politics/wanda-vazquez-bribery-case-collapses";
 
     if (path === "/") {
       return {

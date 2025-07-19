@@ -118,7 +118,8 @@ const stockData = [
           <div className="container-fluid">
             <div className="d-flex">
               {navItems.map((item) => {
-                const href = `/category/${item.slug}`;
+                const href = `/${item.slug}`;
+
                 const isActive = pathname === href;
                 return (
                   <Link

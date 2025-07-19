@@ -141,7 +141,7 @@ export default function RootLayout({
          <meta name="robots" content="index, follow, max-image-preview:large" />
         <meta name="googlebot" content="index, follow" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="google-site-verification" content="7z_uqgjSehp6mGyeHUcPBvaUYZdsj6bYiD_qnJZ5bwY" />
+        <meta name="google-site-verification" content="kon_27CjROUsnUED0oXPUpqDv_k4SHJuOy9wMOoW2Nk" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header/>
