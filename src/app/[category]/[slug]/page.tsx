@@ -99,6 +99,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: 'All bribery charges dropped against former PR Gov. Wanda Vázquez; case ends with only a technical campaign finance violation, no corruption proven.',
       keywords: 'Wanda Vázquez, campaign finance violation, charges dropped, Puerto Rico, DOJ, bribery case',
       authors: [{ name: 'Staff Reporter' }],
+      alternates:{canonical:"https://www.nycreport.org/politics/wanda-vazquez-bribery-case-collapses/"},
       openGraph: {
         title: 'Wanda Vázquez Bribery Case Collapses – Only Minor Violation Remains',
         description: 'All bribery charges dropped against former PR Gov. Wanda Vázquez; case ends with only a technical campaign finance violation, no corruption proven.',
@@ -163,7 +164,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const imageUrlTrump = article.image.startsWith('http') ? article.image : `${siteUrl}${article.image}`;
 
   if (isTrumpArticle) {
-    console.log("trumpppppppp")
+    
     return {
       title: 'Donald Trump’s Lasting Impact: 100 Days of American Renewal',
       description: 'Discover how Donald J. Trump’s leadership in his first 100 daysbrought sweeping changes across energy, economy, and global diplomacy.',
