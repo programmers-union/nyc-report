@@ -15,51 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nycreport.org/"),
-  title: "Business,Politics, Technology,Health,Science,Sports",
-  description:
-    "Stay updated with breaking news, global business insights, and financial strategies. Explore business investments, market trends, and analysis.",
-  keywords:
-    "Breaking business news,Politics, Global financial insights, Global business investments, Market trends 2025, Private equity insights, Venture capital news, Cryptocurrency updates, Blockchain analysis, AI & tech startup news, Sustainable investing, ESG strategies, Stock market tips, Smart investing,",
-  openGraph: {
-    title: "Business,Politics, Technology,Health,Science,Sports",
-    description:
-      "Stay updated with breaking news, global business insights, and financial strategies. Explore business investments, market trends, and analysis.",
-    url: "https://www.nycreport.org/",
-    siteName: "nycreport",
-    images: [
-      {
-        url: "https://www.nycreport.org/images/nyc-report-logo.webp",
-        width: 1024,
-        height: 1024,
-        alt: "nycreport Logo",
-      },
-    ],
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Business,Politics, Technology,Health,Science,Sports",
-    description:
-      "Stay updated with breaking news, global business insights, and financial strategies. Explore business investments, market trends, and analysis.",
-    images:
-      "https://www.nycreport.org/images/nyc-report-logo.webp",
-  },
-  alternates: {
-    canonical: "https://www.nycreport.org/",
-    languages: {
-      en: "https://www.nycreport.org/",
-      "x-default": "https://www.nycreport.org/",
-    },
-  },
-  other: {
-    author: "nycreporter",
-  },
-  icons: {
-    icon: "/favicon.ico",
-  },
-};
+
 
 export default function RootLayout({
   children,
