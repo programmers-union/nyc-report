@@ -24,6 +24,8 @@ const stockData = [
     { label: "Health", slug: "health" },
     { label: "Science", slug: "science" },
     { label: "Politics", slug: "politics" },
+    {label:"Entertainment",slug:"entertainment"},
+    {label:"Education",slug:"education"}
   ];
 
   return (
@@ -41,7 +43,7 @@ const stockData = [
                 </div>
               ))}
               <div className="ms-auto">
-                <a href="#" className="text-decoration-none text-muted" style={{ fontSize: "12px" }}>
+                <a href="#"title="voir" className="text-decoration-none text-muted" style={{ fontSize: "12px" }}>
                   Voir la bourse sur Investir →
                 </a>
               </div>
@@ -56,7 +58,7 @@ const stockData = [
             <div className="row align-items-center d-none d-md-flex">
               {/* Left side - Menu and Search */}
               <div className="col-md-4 d-flex align-items-center">
-                <button className="section-hamburger me-3" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <button className="section-hamburger me-3" title="Toggle Menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                   ☰
                 </button>
                 <div className="position-relative">
@@ -67,7 +69,7 @@ const stockData = [
 
               {/* Center - Logo */}
               <div className="col-md-4 text-center">
-                <a href="/" className="section-logo">NYC REPORT</a>
+                <a href="/" className="section-logo" title="section-logo">NYC REPORT</a>
               </div>
 
               {/* Right side - Subscribe */}
@@ -82,10 +84,10 @@ const stockData = [
                 <button className="section-btn-subscribe">Subscribe</button>
               </div>
               <div className="section-mobile-center">
-                <a href="/" className="section-logo">NYC REPORT</a>
+                <a href="/" className="section-logo" title="section-logo">NYC REPORT</a>
               </div>
               <div className="section-mobile-right">
-                <button className="section-icon-btn">🔍</button>
+                <button className="section-icon-btn" title="search">🔍</button>
                 {/* <button className="section-hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>☰</button> */}
               </div>
             </div>
@@ -104,6 +106,7 @@ const stockData = [
                     key={item.slug}
                     href={href}
                     className={`section-nav-item ${isActive ? "active" : ""}`}
+                    title={item.label}
                   >
                     {item.label}
                   </Link>
@@ -126,6 +129,7 @@ const stockData = [
                     key={item.slug}
                     href={href}
                     className={`section-nav-item ${isActive ? "active" : ""}`}
+                    title={item.label}
                   >
                     {item.label}
                   </Link>
@@ -146,6 +150,7 @@ const stockData = [
                   key={item.slug}
                   href={href}
                   className={`section-nav-item ${isActive ? "active" : ""}`}
+                  title={item.label}
                 >
                   {item.label}
                 </Link>

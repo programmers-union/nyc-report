@@ -31,7 +31,7 @@ const NewsListComponent = ({
        
           {/* Main content */}
           <div className="col-md-9">
-            <a href="#" className="newslist-main-title">
+            <a href="#" title={mainTitle} className="newslist-main-title">
               {mainTitle}
             </a>
             
@@ -42,7 +42,7 @@ const NewsListComponent = ({
                     {item.category}
                   </span>
                 )}
-                <a href="#" className="newslist-item-title">
+                <a href="#" title={item.title} className="newslist-item-title">
                   {item.hasRedDot && <span className="newslist-red-dot"></span>}
                   {item.title}
                 </a>
@@ -68,7 +68,7 @@ const NewsListComponent = ({
             </div>
           )}
           {tags.map((tag, index) => (
-            <a key={index} href="#" className="newslist-tag">
+            <a key={index} href="#" title={tag} className="newslist-tag">
               {tag}
             </a>
             

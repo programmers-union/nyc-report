@@ -9,6 +9,7 @@ import technologyData from '../../public/data/technology.json';
 import sportsData from '../../public/data/sports.json';
 import scienceData from '../../public/data/science.json'
 import healthData from '../../public/data/health.json';
+import entertainmentData from '../../public/data/entertainment.json';
 import Script from "next/script";
 import { title } from "process";
 import CategoryPage from "./[category]/page";
@@ -151,34 +152,34 @@ export default function Home() {
 
 
     <div className="container py-5">
-      <NewsArticleComponent mainArticle={politicsData[0]} />
+      <NewsArticleComponent mainArticle={politicsData[15]} />
 
 
       <div className="row width-first">
         <div className="col-lg-8">
           <NewsBus
-            title={politicsData[1].title}
-             shortdescription={politicsData[1].shortdescription ?? ''}
+            title={politicsData[14].title}
+             shortdescription={politicsData[14].shortdescription ?? ''}
             isPremium={true}
-            imageUrl={politicsData[1].image}
-            category={politicsData[1].category}
-            slug={politicsData[1].slug}
+            imageUrl={politicsData[14].image}
+            category={politicsData[14].category}
+            slug={politicsData[14].slug}
           />
           <NewsBus
-            title={businessData[0].title}
-            shortdescription={businessData[0].shortdescription ??''}
+            title={businessData[30].title}
+            shortdescription={businessData[30].shortdescription ??''}
             isPremium={true}
-            imageUrl={businessData[0].image}
-            category={businessData[0].category}
-            slug={businessData[0].slug}
+            imageUrl={businessData[30].image}
+            category={businessData[30].category}
+            slug={businessData[30].slug}
           />
           <NewsBus
-            title={politicsData[2].title}
-            shortdescription={politicsData[2].shortdescription ?? ''}
+            title={politicsData[16].title}
+            shortdescription={politicsData[16].shortdescription ?? ''}
             isPremium={true}
-            imageUrl={politicsData[2].image}
-            category={politicsData[2].category}
-            slug={politicsData[2].slug}
+            imageUrl={politicsData[16].image}
+            category={politicsData[16].category}
+            slug={politicsData[16].slug}
           />
         </div>
         <div className="col-lg-4">
@@ -264,13 +265,13 @@ export default function Home() {
 <div className="row border-bottom">
   <div className="col-lg-3 border-end">
  <NewsSection 
-  sectionTitle="Technology"
+  sectionTitle="Entertainment"
   mainArticle={{
-    image: technologyData[0].image,
-    imageAlt: technologyData[0].slug,
-    category: technologyData[0].category,
-    title: technologyData[0].title,
-    slug:technologyData[0].slug
+    image: entertainmentData[0].image,
+    imageAlt: entertainmentData[0].slug,
+    category: entertainmentData[0].category,
+    title: entertainmentData[0].title,
+    slug:entertainmentData[0].slug
     
   }}
   
@@ -278,13 +279,13 @@ export default function Home() {
   </div>
     <div className="col-lg-3 border-end">
  <NewsSection 
-  sectionTitle="Technology"
+  sectionTitle="Entertainment"
   mainArticle={{
-    image: technologyData[1].image,
-    imageAlt:technologyData[1].slug,
-    category:technologyData[1].category,
-    title: technologyData[1].title,
-    slug:technologyData[1].slug
+    image: entertainmentData[1].image,
+    imageAlt:entertainmentData[1].slug,
+    category:entertainmentData[1].category,
+    title: entertainmentData[1].title,
+    slug:entertainmentData[1].slug
     
   }}
  
@@ -292,13 +293,13 @@ export default function Home() {
   </div>
     <div className="col-lg-3 border-end">
  <NewsSection 
-  sectionTitle="Technology"
+  sectionTitle="Entertainment"
   mainArticle={{
-    image: technologyData[2].image,
-    imageAlt:technologyData[2].slug,
-    category: technologyData[2].category,
-    title: technologyData[2].title,
-    slug:technologyData[2].slug
+    image: entertainmentData[2].image,
+    imageAlt:entertainmentData[2].slug,
+    category: entertainmentData[2].category,
+    title: entertainmentData[2].title,
+    slug:entertainmentData[2].slug
     
   }}
  
@@ -309,29 +310,29 @@ export default function Home() {
       <div className="row width-first py-5">
         <div className="col-lg-8">
           <NewsBus
-            title={businessData[2].title}
-           shortdescription={businessData[2].shortdescription ?? ''}
+            title={businessData[20].title}
+           shortdescription={businessData[20].shortdescription ?? ''}
             isPremium={true}
-            imageUrl={businessData[2].image}
-            category={businessData[2].category}
-            slug={businessData[2].slug}
+            imageUrl={businessData[20].image}
+            category={businessData[20].category}
+            slug={businessData[20].slug}
           />
           <NewsBus
-            title={businessData[3].title}
-           shortdescription={businessData[3].shortdescription ?? ''}
+            title={businessData[21].title}
+           shortdescription={businessData[21].shortdescription ?? ''}
             isPremium={true}
-            imageUrl={businessData[3].image}
-            category={businessData[3].category}
-            slug={businessData[3].slug}
+            imageUrl={businessData[21].image}
+            category={businessData[21].category}
+            slug={businessData[21].slug}
 
           />
           <NewsBus
-            title={technologyData[0].title}
-            shortdescription={technologyData[0].shortdescription ?? ''}
+            title={technologyData[18].title}
+            shortdescription={technologyData[18].shortdescription ?? ''}
             isPremium={true}
-            imageUrl={technologyData[0].image}
-            category={technologyData[0].category}
-            slug={technologyData[0].slug}
+            imageUrl={technologyData[18].image}
+            category={technologyData[18].category}
+            slug={technologyData[18].slug}
 
           />
         </div>
@@ -342,20 +343,20 @@ export default function Home() {
     <div className="row width-first">
         <div className="col-lg-8">
           <NewsBus
-            title={technologyData[1].title}
-            shortdescription={technologyData[1].shortdescription ?? ''}
+            title={technologyData[19].title}
+            shortdescription={technologyData[19].shortdescription ?? ''}
             isPremium={true}
-          imageUrl={technologyData[1].image}
-          category={technologyData[1].category}
-          slug={technologyData[1].slug}
+          imageUrl={technologyData[19].image}
+          category={technologyData[19].category}
+          slug={technologyData[19].slug}
           />
           <NewsBus
-            title={technologyData[2].title}
-            shortdescription={technologyData[2].shortdescription ?? ''}
+            title={technologyData[20].title}
+            shortdescription={technologyData[20].shortdescription ?? ''}
             isPremium={true}
-            imageUrl={technologyData[2].image}
-            category={technologyData[2].category}
-            slug={technologyData[2].slug}
+            imageUrl={technologyData[20].image}
+            category={technologyData[20].category}
+            slug={technologyData[20].slug}
           />
           <NewsBus
             title={sportsData[0].title}
@@ -461,11 +462,11 @@ export default function Home() {
  <NewsSection 
   sectionTitle="Science"
   mainArticle={{
-    image: scienceData[0].image,
-    imageAlt: scienceData[0].slug,
-    category: scienceData[0].category,
-    title: scienceData[0].title,
-    slug:scienceData[0].slug
+    image: scienceData[15].image,
+    imageAlt: scienceData[15].slug,
+    category: scienceData[15].category,
+    title: scienceData[15].title,
+    slug:scienceData[15].slug
   
   }}
   
@@ -505,11 +506,11 @@ export default function Home() {
  <NewsSection 
   sectionTitle="Business"
   mainArticle={{
-    image: businessData[3].image,
-    imageAlt: businessData[3].slug,
-    category: businessData[3].category,
-    title: businessData[3].title,
-    slug:businessData[3].slug
+    image: businessData[25].image,
+    imageAlt: businessData[25].slug,
+    category: businessData[25].category,
+    title: businessData[25].title,
+    slug:businessData[25].slug
     
   }}
 
@@ -519,11 +520,11 @@ export default function Home() {
  <NewsSection 
   sectionTitle="Business"
   mainArticle={{
-    image: businessData[2].image,
-    imageAlt:businessData[2].slug,
-    category:businessData[2].category,
-    title: businessData[2].title,
-    slug:businessData[2].slug
+    image: businessData[26].image,
+    imageAlt:businessData[26].slug,
+    category:businessData[26].category,
+    title: businessData[26].title,
+    slug:businessData[26].slug
 
   }}
   
@@ -533,11 +534,11 @@ export default function Home() {
  <NewsSection 
   sectionTitle="Business"
   mainArticle={{
-     image: businessData[1].image,
-    imageAlt:businessData[1].slug,
-    category:businessData[1].category,
-    title: businessData[1].title,
-    slug:businessData[1].slug
+     image: businessData[27].image,
+    imageAlt:businessData[27].slug,
+    category:businessData[27].category,
+    title: businessData[27].title,
+    slug:businessData[27].slug
    
   }}
 

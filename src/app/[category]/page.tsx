@@ -5,6 +5,8 @@ import technologyData from "../../../public/data/technology.json";
 import sportsData from "../../../public/data/sports.json";
 import scienceData from "../../../public/data/science.json";
 import healthData from "../../../public/data/health.json";
+import entertainmentData from "../../../public/data/entertainment.json";
+import educationData from "../../../public/data/education.json";
 
 type Article = {
   category: string;
@@ -30,6 +32,9 @@ export async function generateStaticParams() {
     { category: "sports" },
     { category: "science" },
     { category: "health" },
+    {category:"entertainment"},
+    {category:"education"},
+    
   ];
 }
 
@@ -58,6 +63,11 @@ export default async function CategoryPage({ params }: PageProps) {
     case "politics":
       filteredArticles = politicsData;
       break;
+    case "entertainment":
+      filteredArticles=entertainmentData;
+      break;
+    case "education":
+      filteredArticles=educationData;
 
     default:
       break;
@@ -71,7 +81,7 @@ export default async function CategoryPage({ params }: PageProps) {
 
   return (
     <div className="container  row width-first">
-      {/* <h2 className="mb-4 text-capitalize">{category} News</h2> */}
+      
       {filteredArticles.map((article, index) => (
          <div key={article.slug || `${article.category}-${index}`}>
           <NewsBus

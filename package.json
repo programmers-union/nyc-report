@@ -4,15 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node w3infoclear.js",
     "start": "next start",
     "lint": "next lint",
     "export": "next build && next export",
-    "sitemap":"next-sitemap",
+    "sitemap": "next-sitemap",
     "postbuild": "next-sitemap"
   },
   "dependencies": {
     "bootstrap": "^5.3.7",
+    "bootstrap-icons": "^1.13.1",
     "next": "15.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
