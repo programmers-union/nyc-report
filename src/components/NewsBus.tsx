@@ -31,7 +31,7 @@ const NewsBus: React.FC<NewsBus> = ({
   
 }) => {
   return (
-    <Link href={`/${category.toLowerCase()}/${slug}`} className='text-decoration-none text-reset'>
+    <Link href={`/${category.toLowerCase()}/${slug}`} className='text-decoration-none text-reset' title={title}>
         <div className=" SwissZeroRateArticle py-4  ">
       <div className=" row align-items-start ">
         <div className="col-md-9">

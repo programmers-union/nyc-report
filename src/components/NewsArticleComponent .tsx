@@ -72,7 +72,7 @@ sidebarItems = [
         <div className="row section1-width border-bottom">
           {/* ─── Main Article ─────────────────────────────── */}
           <div className="col-lg-8 col-md-7 border-end">
-            <Link href={mainHref} className="text-decoration-none text-reset">
+            <Link href={mainHref} className="text-decoration-none text-reset" title={mainArticle.title}>
               <div className="component-main-article">
                 <img
                   src={mainArticle.image}
@@ -90,9 +90,9 @@ sidebarItems = [
                     </span>
                   )}
 
-                  <h1 className="component-article-title">
+                  <h2 className="component-article-title">
                     {mainArticle.title}
-                  </h1>
+                  </h2>
                 </div>
               </div>
             </Link>
@@ -114,6 +114,7 @@ sidebarItems = [
                     key={idx}
                     href={itemHref}
                     className="text-reset text-decoration-none"
+                    title={item.title}
                   >
                     <div className="component-sidebar-item">
                       <div className="component-sidebar-meta">

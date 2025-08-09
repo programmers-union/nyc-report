@@ -22,7 +22,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
   slug
 }) => {
   return (
-    <Link href={`/${category.toLowerCase()}/${slug}`} className="text-decoration-none text-dark">
+    <Link href={`/${category.toLowerCase()}/${slug}`} className="text-decoration-none text-dark" title={title}>
       <div className="news-card">
         <div className="news-card__container">
           {/* Image Section */}

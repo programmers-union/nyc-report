@@ -29,7 +29,7 @@ const NewsSection: React.FC<NewsSectionProps> = ({
         </div>
 
         {/* ─── Main Article ───────────────────────────── */}
-        <Link href={mainHref} className="text-decoration-none text-reset">
+        <Link href={mainHref} className="text-decoration-none text-reset" title={mainArticle.title}>
           <div className="news-section__main-article">
             <div className="news-section__image-wrapper">
               {/* Staying with <img> to avoid the Image-API error in static export */}

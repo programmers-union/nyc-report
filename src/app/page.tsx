@@ -53,9 +53,9 @@ const data2=[
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.nycreport.org/"),
-  title: "Business,Politics, Technology,Health,Science,Sports",
+  title: "The NYC Report - Latest News & Analysis on New York City",
   description:
-    "Stay updated with breaking news, global business insights, and financial strategies. Explore business investments, market trends, and analysis.",
+    " Your daily source for in-depth news, reports, and analysis covering politics, business, and culture in New York City and beyond. Stay informed with The NYC Report.",
   keywords:
     "Breaking business news,Politics, Global financial insights, Global business investments, Market trends 2025, Private equity insights, Venture capital news, Cryptocurrency updates, Blockchain analysis, AI & tech startup news, Sustainable investing, ESG strategies, Stock market tips, Smart investing,",
   openGraph: {
@@ -152,6 +152,8 @@ export default function Home() {
 
 
     <div className="container py-5">
+
+
       <NewsArticleComponent mainArticle={politicsData[15]} />
 
 

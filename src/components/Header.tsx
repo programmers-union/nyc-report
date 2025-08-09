@@ -70,6 +70,9 @@ const stockData = [
               {/* Center - Logo */}
               <div className="col-md-4 text-center">
                 <a href="/" className="section-logo" title="section-logo">NYC REPORT</a>
+                <h1 className="text-center text-muted fw-light fst-italic fs-6 border-bottom mt-3 mb-4">
+  NYC Report – Independent, In-Depth Journalism
+</h1>
               </div>
 
               {/* Right side - Subscribe */}
