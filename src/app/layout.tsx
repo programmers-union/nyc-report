@@ -52,7 +52,7 @@ export default function RootLayout({
                   availableLanguage: ["English"],
                 },
                
-                sameAs: ["https://www.nycreport.org/"],
+                sameAs: ["https://www.nycreport.org/","https://www.instagram.com/nycreport_/"],
               },
               null,
               2

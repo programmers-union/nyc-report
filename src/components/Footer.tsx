@@ -16,24 +16,24 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="d-flex gap-3 mt-3">
-              <a
+              {/* <a
                 href="/"
                 className="text-light"
                 title="linkedin"
                 aria-label="LinkedIn"
               >
                 <i className="bi bi-linkedin fs-5"></i>
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="/"
                 className="text-light"
                 title="youtube"
                 aria-label="YouTube"
               >
                 <i className="bi bi-youtube fs-5"></i>
-              </a>
+              </a> */}
               <a
-                href="/"
+                href="https://x.com/nycreport_"
                 className="text-light"
                 title="twitter"
                 aria-label="Twitter"
@@ -41,12 +41,12 @@ const Footer = () => {
                 <i className="bi bi-twitter fs-5"></i>
               </a>
               <a
-                href="/"
+                href="https://www.instagram.com/nycreport_/"
                 className="text-light"
-                title="facebook"
-                aria-label="Facebook"
+                title="instagram"
+                aria-label="Instagram"
               >
-                <i className="bi bi-facebook fs-5"></i>
+                <i className="bi bi-instagram fs-5"></i>
               </a>
             </div>
           </div>

@@ -76,6 +76,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site:"@nycreport_",
     title: "Business,Politics, Technology,Health,Science,Sports",
     description:
       "Stay updated with breaking news, global business insights, and financial strategies. Explore business investments, market trends, and analysis.",

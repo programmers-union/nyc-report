@@ -36,13 +36,13 @@ const TeamPage: React.FC = () => {
               <div className="card h-100 shadow-sm border-0">
                 <div className="card-body p-4">
                   <div className="mb-3">
-                    <h3 className="h5 fw-bold text-dark mb-1">Patricia B. Ensor</h3>
+                    <h3 className="h5 fw-bold text-dark mb-1">Edwin V. Christopher</h3>
                     <p className="text-danger fw-medium mb-0">Founder & Editor-in-Chief</p>
                   </div>
                   <p className="text-muted mb-3 small lh-sm">
-                    Patricia believes the name on a publication should be a promise. As our editor, she's also our conscience—the one who asks the tough questions before a story ever goes live. She started this place to do journalism the right way, and she's the one who keeps us honest.
+                    Edwin V. Christopher believes the name on a publication should be a promise. As our editor, Edwin V. Christopher's also our conscience—the one who asks the tough questions before a story ever goes live. Edwin V. Christopher started this place to do journalism the right way, and Edwin V. Christopher's the one who keeps us honest.
                   </p>
-                  <a href="#" className="btn btn-outline-danger btn-sm ">Read Patricia's Articles</a>
+                  <a href="/edwin-v-christopher" className="btn btn-outline-danger btn-sm ">Read Edwin V. Christopher's Articles</a>
                 </div>
               </div>
             </div>
@@ -52,13 +52,13 @@ const TeamPage: React.FC = () => {
               <div className="card h-100 shadow-sm border-0">
                 <div className="card-body p-4">
                   <div className="mb-3">
-                    <h3 className="h5 fw-bold text-dark mb-1">Melvin S. McManus</h3>
-                    <p className="text-danger fw-medium mb-0">Lead Political & Financial Reporter</p>
+                    <h3 className="h5 fw-bold text-dark mb-1">Lisa F. Keith</h3>
+                    <p className="text-danger fw-medium mb-0">Culture & Society Correspondent | NYCREPORT</p>
                   </div>
                   <p className="text-muted mb-3 small lh-sm">
-                    Melvin reads the fine print so you don't have to. He operates on a healthy skepticism of official statements and a firm belief that the real story is usually hidden in the budget. He connects the dots between Washington, Wall Street, and the real world.
+                    Lisa F. Keith reads the fine print so you don't have to. Lisa F. Keith operates on a healthy skepticism of official statements and a firm belief that the real story is usually hidden in the budget. Lisa F. Keith connects the dots between Washington, Wall Street, and the real world.
                   </p>
-                  <a href="#" className="btn btn-outline-danger btn-sm">Read Melvin's Articles</a>
+                  <a href="/lisa-f-keith" className="btn btn-outline-danger btn-sm">Read Lisa F. Keith's Articles</a>
                 </div>
               </div>
             </div>
@@ -68,13 +68,13 @@ const TeamPage: React.FC = () => {
               <div className="card h-100 shadow-sm border-0">
                 <div className="card-body p-4">
                   <div className="mb-3">
-                    <h3 className="h5 fw-bold text-dark mb-1">Karen J. Dolce</h3>
-                    <p className="text-danger fw-medium mb-0">Culture & Society Correspondent</p>
+                    <h3 className="h5 fw-bold text-dark mb-1">Roy J. Miles</h3>
+                    <p className="text-danger fw-medium mb-0">Lead Political & Financial Reporter</p>
                   </div>
                   <p className="text-muted mb-3 small lh-sm">
-                    While others cover institutions, Karen covers the individuals living in their shadow. She's the one on the ground, finding the single voice that makes a complex issue feel real and human. She believes you can't understand the world without understanding the people in it.
+                    While others cover institutions, Roy J. Miles covers the individuals living in their shadow. Roy J. Miles's the one on the ground, finding the single voice that makes a complex issue feel real and human. Roy J. Miles believes you can't understand the world without understanding the people in it.
                   </p>
-                  <a href="#" className="btn btn-outline-danger btn-sm">Read Karen's Articles</a>
+                  <a href="/roy-j-miles" className="btn btn-outline-danger btn-sm">Read Roy J. Miles's Articles</a>
                 </div>
               </div>
             </div>

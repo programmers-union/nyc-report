@@ -122,35 +122,44 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         title: 'Wanda Vázquez Bribery Case Collapses – Only Minor Violation Remains',
         description: 'All bribery charges dropped against former PR Gov. Wanda Vázquez; case ends with only a technical campaign finance violation, no corruption proven.',
         images: [imageUrl],
-        site: '@nycreport', // Replace with your Twitter handle
-        creator: '@nycreport', // Replace with your Twitter handle
+        site: '@nycreport_', // Replace with your Twitter handle
+        creator: '@nycreport_', // Replace with your Twitter handle
       },
       other: {
         // JSON-LD structured data
         'script:ld+json': JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'NewsArticle',
-          headline: 'Bribery Case Collapses into Minor Campaign Finance Violation',
-          datePublished: '2025-06-18',
+          headline: 'Wanda Vázquez Bribery Case Collapses – Only Minor Violation Remains',
+          description:'All bribery charges dropped against former PR Gov. Wanda Vázquez; case ends with only a technical campaign finance violation, no corruption proven.',
+          datePublished: '2025-06-24T05:30:00-04:00',
+          dateModified:"2025-08-11T03:00:00-04:00",
           author: {
-            '@type': 'Person',
-            name: 'Staff Reporter',
+            '@type': 'Organization',
+            name: 'NYCREPORT Staff',
           },
           publisher: {
-            '@type': 'Organization',
-            name: 'NYC Report',
+            '@type': 'NewsMediaOrganization',
+            name: 'The NYC Report',
             logo: {
               '@type': 'ImageObject',
               url: `${siteUrl}/logo.png`,
             },
           },
-          image: imageUrl,
+          image:{
+           ' @type':'ImageObject',
+           'url':imageUrl,
+            "width": 1440,
+            "height": 809
+          },
           alternatives:{
             canonical:
             "https://www.nycreport.org/politics/wanda-vazquez-bribery-case-collapses/"
           },
           articleBody: article.description.substring(0, 160),
-          keywords: 'Wanda Vázquez, campaign finance law, DOJ, Puerto Rico, bribery, corruption',
+           articleSection: "Politics",
+          keywords: ["Wanda Vázquez", "bribery case", "Puerto Rico", "corruption", "campaign finance", "politics"],
+          isAccessibleForFree:true,
           url: currentUrl,
         }),
       },
