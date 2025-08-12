@@ -5,9 +5,10 @@ interface ArticleHeroProps {
   description: string;
   category: string;
   image?: string;
+  author?:string;
 }
 
-const ArticleHero: React.FC<ArticleHeroProps> = ({ title, description, category, image }) => {
+const ArticleHero: React.FC<ArticleHeroProps> = ({ title, description, category, image ,author}) => {
   return (
     <article className="articleHero-wrapper">
       <div className="container">
@@ -26,6 +27,11 @@ const ArticleHero: React.FC<ArticleHeroProps> = ({ title, description, category,
               <h1 className="articleHero-title display-4 fw-bold mb-4 lh-1">
                 {title}
               </h1>
+              {author && (
+              <p className="text-secondary small mt-1 mb-0">
+                By <span className="fw-semibold">{author}</span>
+              </p>
+            )}
 
                {/* Featured Image */}
             {image && (

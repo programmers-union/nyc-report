@@ -157,33 +157,56 @@ const Footer = () => {
               </div>
 
               <div className="col-md-3 mb-3">
-                <p>Sports</p>
+                <p>
+                  <a href="/about" className="text-decoration-none text-white">
+                    About
+                  </a>
+                </p>
                 <ul className="list-unstyled small">
                   <li>
                     <a
-                      href="/"
-                      title="latest"
+                      href="/team"
+                      title="us"
                       className="text-light text-decoration-none"
                     >
-                      Latest News
+                      Our Team
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
-                      title="events"
+                      href="/privacy-policy"
+                      title="global"
                       className="text-light text-decoration-none"
                     >
-                      Events
+                      Privacy Policy
                     </a>
                   </li>
                   <li>
                     <a
-                      href="/"
-                      title="scores"
+                      href="/contact"
+                      title="contact"
                       className="text-light text-decoration-none"
                     >
-                      Scores
+                      Contact
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/corrections-policy"
+                      title="corrections-policy"
+                      className="text-light text-decoration-none"
+                    >
+                      Corrections Policy
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="/editorial-policy"
+                      title="editorial-policy"
+                      className="text-light text-decoration-none"
+                    >
+                      Editorial Policy
                     </a>
                   </li>
                 </ul>
@@ -291,59 +314,7 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="col-md-3 mb-3">
-                <p>
-                  <a href="/about" className="text-decoration-none text-white">
-                    About
-                  </a>
-                </p>
-                <ul className="list-unstyled small">
-                  <li>
-                    <a
-                      href="/team"
-                      title="us"
-                      className="text-light text-decoration-none"
-                    >
-                      Our Team
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/privacy-policy"
-                      title="global"
-                      className="text-light text-decoration-none"
-                    >
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/contact"
-                      title="contact"
-                      className="text-light text-decoration-none"
-                    >
-                      Contact
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/corrections-policy"
-                      title="corrections-policy"
-                      className="text-light text-decoration-none"
-                    >
-                      Corrections Policy
-                    </a>
-                  </li>
 
-                  <li>
-                    <a
-                      href="/editorial-policy"
-                      title="editorial-policy"
-                      className="text-light text-decoration-none"
-                    >
-                      Editorial Policy
-                    </a>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>

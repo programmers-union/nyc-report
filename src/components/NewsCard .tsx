@@ -11,6 +11,7 @@ interface NewsCardProps {
   category: string;
   title: string;
   slug: string;
+  author:string;
 }
 
 const NewsCard: React.FC<NewsCardProps> = ({
@@ -19,7 +20,8 @@ const NewsCard: React.FC<NewsCardProps> = ({
   number = "01",
   category,
   title,
-  slug
+  slug,
+  author
 }) => {
   return (
     <Link href={`/${category.toLowerCase()}/${slug}`} className="text-decoration-none text-dark" title={title}>
@@ -52,6 +54,11 @@ const NewsCard: React.FC<NewsCardProps> = ({
             <h3 className="news-card__title">
               {title}
             </h3>
+            {author && (
+              <p className="text-secondary small mt-1 mb-0">
+                By <span className="fw-semibold">{author}</span>
+              </p>
+            )}
           </div>
         </div>
       </div>

@@ -90,9 +90,10 @@ export const metadata: Metadata = {
       "x-default": "https://www.nycreport.org/",
     },
   },
-  other: {
-    author: "nycreporter",
-  },
+other: {
+  author: ["Lisa F Keith", "Roy J Miles", "Edwin V Christopher"]
+}
+,
   icons: {
     icon: "/favicon.ico",
   },
@@ -167,6 +168,7 @@ export default function Home() {
             imageUrl={politicsData[14].image}
             category={politicsData[14].category}
             slug={politicsData[14].slug}
+            author={politicsData[14].author}
           />
           <NewsBus
             title={businessData[30].title}
@@ -175,6 +177,7 @@ export default function Home() {
             imageUrl={businessData[30].image}
             category={businessData[30].category}
             slug={businessData[30].slug}
+            author={businessData[30].author}
           />
           <NewsBus
             title={politicsData[16].title}
@@ -183,6 +186,7 @@ export default function Home() {
             imageUrl={politicsData[16].image}
             category={politicsData[16].category}
             slug={politicsData[16].slug}
+            author={politicsData[16].author}
           />
         </div>
         <div className="col-lg-4">
@@ -198,6 +202,7 @@ export default function Home() {
             category={healthData[0].category}
             title={healthData[0].title}
             slug={healthData[0].slug}
+            author={healthData[0].author}
           />
         </div>
 
@@ -209,6 +214,7 @@ export default function Home() {
             category={healthData[1].category}
             title={healthData[1].title  }
             slug={healthData[1].slug}
+            author={healthData[1].author}
 
           />
         </div>
@@ -220,6 +226,7 @@ export default function Home() {
             category={healthData[2].category}
             title={healthData[2].title}
             slug={healthData[2].slug}
+            author={healthData[2].author}
           />
         </div>
         {/* <div className="col-lg-3">
@@ -241,6 +248,7 @@ export default function Home() {
             imageUrl={politicsData[6].image}
             category={politicsData[6].category}
             slug={politicsData[6].slug}
+            author={politicsData[6].author}
           />
           <NewsBus
             title={businessData[1].title}
@@ -249,6 +257,7 @@ export default function Home() {
             imageUrl={businessData[1].image}
             category={businessData[1].category}
             slug={businessData[1].slug}
+            author={businessData[1].author}
           />
           <NewsBus
             title={politicsData[4].title}
@@ -257,6 +266,7 @@ export default function Home() {
             imageUrl={politicsData[4].image}
             category={politicsData[4].category}
             slug={politicsData[4].slug}
+            author={politicsData[4].author}
           />
         </div>
         <div className="col-lg-4">
@@ -274,7 +284,8 @@ export default function Home() {
     imageAlt: entertainmentData[0].slug,
     category: entertainmentData[0].category,
     title: entertainmentData[0].title,
-    slug:entertainmentData[0].slug
+    slug:entertainmentData[0].slug,
+    author:entertainmentData[0].author
     
   }}
   
@@ -288,7 +299,8 @@ export default function Home() {
     imageAlt:entertainmentData[1].slug,
     category:entertainmentData[1].category,
     title: entertainmentData[1].title,
-    slug:entertainmentData[1].slug
+    slug:entertainmentData[1].slug,
+    author:entertainmentData[1].author
     
   }}
  
@@ -302,7 +314,8 @@ export default function Home() {
     imageAlt:entertainmentData[2].slug,
     category: entertainmentData[2].category,
     title: entertainmentData[2].title,
-    slug:entertainmentData[2].slug
+    slug:entertainmentData[2].slug,
+    author:entertainmentData[2].author
     
   }}
  
@@ -319,6 +332,7 @@ export default function Home() {
             imageUrl={businessData[20].image}
             category={businessData[20].category}
             slug={businessData[20].slug}
+            author={businessData[20].author}
           />
           <NewsBus
             title={businessData[21].title}
@@ -327,6 +341,7 @@ export default function Home() {
             imageUrl={businessData[21].image}
             category={businessData[21].category}
             slug={businessData[21].slug}
+            author={businessData[21].author}
 
           />
           <NewsBus
@@ -336,6 +351,7 @@ export default function Home() {
             imageUrl={technologyData[18].image}
             category={technologyData[18].category}
             slug={technologyData[18].slug}
+            author={technologyData[18].author}
 
           />
         </div>
@@ -352,6 +368,7 @@ export default function Home() {
           imageUrl={technologyData[19].image}
           category={technologyData[19].category}
           slug={technologyData[19].slug}
+          author={technologyData[19].author}
           />
           <NewsBus
             title={technologyData[20].title}
@@ -360,6 +377,7 @@ export default function Home() {
             imageUrl={technologyData[20].image}
             category={technologyData[20].category}
             slug={technologyData[20].slug}
+            author={technologyData[20].author}
           />
           <NewsBus
             title={sportsData[0].title}
@@ -368,6 +386,7 @@ export default function Home() {
             imageUrl={sportsData[0].image}
             category={sportsData[0].category}
             slug={sportsData[0].slug}
+            author={sportsData[0].author}
           />
         </div>
 
@@ -381,6 +400,7 @@ export default function Home() {
             category={politicsData[0].category}
             title={politicsData[0].title}
             slug={politicsData[0].slug}
+            author={politicsData[0].author}
           />
         </div>
 
@@ -392,6 +412,7 @@ export default function Home() {
             category={politicsData[5].category}
             title={politicsData[5].title}
             slug={politicsData[5].slug}
+            author={politicsData[5].author}
           />
         </div>
         <div className="col-lg-3 border-end">
@@ -402,6 +423,7 @@ export default function Home() {
            category={politicsData[2].category}
             title={politicsData[2].title}
             slug={politicsData[2].slug}
+            author={politicsData[2].author}
           />
         </div>
 
@@ -415,6 +437,7 @@ export default function Home() {
             imageUrl={sportsData[1].image}
             category={sportsData[1].category}
             slug={sportsData[1].slug}
+            author={sportsData[1].author}
           />
           <NewsBus
             title={sportsData[2].title}
@@ -423,6 +446,8 @@ export default function Home() {
             imageUrl={sportsData[2].image}
             category={sportsData[2].category}
             slug={sportsData[2].slug}
+            author={sportsData[2].author}
+
           />
           <NewsBus
             title={scienceData[0].title}
@@ -431,6 +456,7 @@ export default function Home() {
             imageUrl={scienceData[0].image}
             category={scienceData[0].category}
             slug={scienceData[0].slug}
+            author={scienceData[0].author}
           />
         </div>
 
@@ -444,6 +470,7 @@ export default function Home() {
             imageUrl={scienceData[4].image}
             category={scienceData[1].category}
             slug={scienceData[1].slug}
+            author={scienceData[1].author}
           />
           {/* <NewsBus
             title="La Suisse bascule dans les taux zéro"
@@ -469,7 +496,8 @@ export default function Home() {
     imageAlt: scienceData[15].slug,
     category: scienceData[15].category,
     title: scienceData[15].title,
-    slug:scienceData[15].slug
+    slug:scienceData[15].slug,
+    author:scienceData[15].author
   
   }}
   
@@ -483,7 +511,8 @@ export default function Home() {
     imageAlt:scienceData[1].slug,
     category:scienceData[1].category,
     title:scienceData[1].title,
-    slug:scienceData[1].slug
+    slug:scienceData[1].slug,
+    author:scienceData[1].author
    
   }}
   
@@ -497,7 +526,8 @@ export default function Home() {
     imageAlt: scienceData[3].slug,
     category: scienceData[3].category,
     title: scienceData[3].title,
-    slug:scienceData[3].slug
+    slug:scienceData[3].slug,
+    author:scienceData[3].author
     
   }}
  
@@ -513,7 +543,8 @@ export default function Home() {
     imageAlt: businessData[25].slug,
     category: businessData[25].category,
     title: businessData[25].title,
-    slug:businessData[25].slug
+    slug:businessData[25].slug,
+    author:businessData[25].author
     
   }}
 
@@ -527,7 +558,8 @@ export default function Home() {
     imageAlt:businessData[26].slug,
     category:businessData[26].category,
     title: businessData[26].title,
-    slug:businessData[26].slug
+    slug:businessData[26].slug,
+    author:businessData[26].author
 
   }}
   
@@ -541,7 +573,8 @@ export default function Home() {
     imageAlt:businessData[27].slug,
     category:businessData[27].category,
     title: businessData[27].title,
-    slug:businessData[27].slug
+    slug:businessData[27].slug,
+    author:businessData[27].author
    
   }}
 

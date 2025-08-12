@@ -7,6 +7,7 @@ type Article = {
   description: string;
   image: string;
   slug: string;
+  author:string;
 };
 
 interface WandaVazquezArticleProps {
@@ -40,6 +41,11 @@ const WandaVazquezArticle: React.FC<WandaVazquezArticleProps> = ({ article }) =>
               </div>
               <div className="col-md-6 col-12 text-md-end text-center text-sm-start mt-2 mt-md-0">
                 <strong>Published:</strong> June 24, 2025
+                
+              <p className="text-secondary small mt-1 mb-0">
+                By <span className="fw-semibold">{article.author}</span>
+              </p>
+            
               </div>
             </div>
           </div>

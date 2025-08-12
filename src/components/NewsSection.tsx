@@ -10,7 +10,8 @@ interface NewsSectionProps {
     imageAlt?: string;
     category?: string;
     title: string;
-    slug: string;          // 🆕  required for linking
+    slug: string; 
+    author:string;         // 🆕  required for linking
   };
 }
 const NewsSection: React.FC<NewsSectionProps> = ({
@@ -47,6 +48,11 @@ const NewsSection: React.FC<NewsSectionProps> = ({
                 </span>
               )}
               <h3 className="news-section__main-title">{mainArticle.title}</h3>
+              {mainArticle.author && (
+              <p className="text-secondary small mt-1 mb-0">
+                By <span className="fw-semibold">{mainArticle.author}</span>
+              </p>
+            )}
             </div>
           </div>
         </Link>

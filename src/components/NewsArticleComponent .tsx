@@ -22,7 +22,9 @@ interface NewsArticleProps {
     image: string;
     category?: string;
     description?: string;
-    slug: string;          // NEW → required for the main detail link
+    shortdescription?:string
+    slug: string; 
+    author:string;         
   };
   sidebarTitle?: string;
   sidebarItems?: SidebarItem[];
@@ -93,6 +95,12 @@ sidebarItems = [
                   <h2 className="component-article-title">
                     {mainArticle.title}
                   </h2>
+                  <p>{mainArticle.shortdescription}</p>
+                
+              <p className="text-secondary small mt-1 mb-0">
+                By <span className="fw-semibold">{mainArticle.author}</span>
+              </p>
+            
                 </div>
               </div>
             </Link>

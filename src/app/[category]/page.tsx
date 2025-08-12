@@ -15,6 +15,7 @@ type Article = {
   description: string;
   image: string;
   slug: string;
+  author:string
 };
 
 interface PageProps {
@@ -94,6 +95,7 @@ export default async function CategoryPage({ params }: PageProps) {
             tagLink={`/articles/${article.slug}`}
             tagText="Read More"
             slug={article.slug}
+            author={article.author}
           />
         </div>
       ))}

@@ -16,6 +16,7 @@ type Article = {
   description: string;
   image: string;
   slug: string;
+  author:string
 };
 
 interface PageProps {
@@ -342,6 +343,7 @@ export default async function DetailPage({ params }: PageProps) {
       description={article.description}
       category={article.category}
       image={article.image}
+      author={article.author} 
     />
   );
 }
