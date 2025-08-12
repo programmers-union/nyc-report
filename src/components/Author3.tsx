@@ -130,7 +130,7 @@ const Author3: React.FC = () => {
           </div>
 
           {/* Articles Section */}
-          <div className="mb-5">
+          {/* <div className="mb-5">
             <div className="text-center mb-4">
               <h2 className="h3 fw-bold text-warning mb-2">
                 📰 Articles by Edwin V. Christopher
@@ -138,12 +138,12 @@ const Author3: React.FC = () => {
               <p className="text-muted">
                 Editorial leadership, investigative reporting, and journalistic standards
               </p>
-            </div>
+            </div> */}
 
             {/* Sample Article Cards - Replace with dynamic content */}
-            <div className="row g-4">
+            {/* <div className="row g-4"> */}
               {/* Article 1 */}
-              <div className="col-lg-6">
+              {/* <div className="col-lg-6">
                 <div className="card border-0 shadow-sm h-100">
                   <div className="card-body p-4">
                     <div className="d-flex justify-content-between align-items-start mb-3">
@@ -162,10 +162,10 @@ const Author3: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Article 2 */}
-              <div className="col-lg-6">
+              {/* <div className="col-lg-6">
                 <div className="card border-0 shadow-sm h-100">
                   <div className="card-body p-4">
                     <div className="d-flex justify-content-between align-items-start mb-3">
@@ -184,10 +184,10 @@ const Author3: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Article 3 */}
-              <div className="col-lg-6">
+              {/* <div className="col-lg-6">
                 <div className="card border-0 shadow-sm h-100">
                   <div className="card-body p-4">
                     <div className="d-flex justify-content-between align-items-start mb-3">
@@ -206,10 +206,10 @@ const Author3: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Article 4 */}
-              <div className="col-lg-6">
+              {/* <div className="col-lg-6">
                 <div className="card border-0 shadow-sm h-100">
                   <div className="card-body p-4">
                     <div className="d-flex justify-content-between align-items-start mb-3">
@@ -229,15 +229,15 @@ const Author3: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Load More Articles */}
-            <div className="text-center mt-4">
+            {/* <div className="text-center mt-4">
               <a href="#" className="btn btn-warning btn-lg px-4 text-dark fw-bold">
                 Load More Articles
               </a>
             </div>
-          </div>
+          </div> */}
 
           {/* Back to Team */}
           <div className="text-center">
