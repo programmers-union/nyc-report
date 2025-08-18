@@ -52,7 +52,7 @@ const data2=[
 ]
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.nycreport.org/"),
+
   title: "The NYC Report - Latest News & Analysis on New York City",
   description:
     " Your daily source for in-depth news, reports, and analysis covering politics, business, and culture in New York City and beyond. Stay informed with The NYC Report.",
@@ -63,6 +63,7 @@ export const metadata: Metadata = {
     description:
       "Stay updated with breaking news, global business insights, and financial strategies. Explore business investments, market trends, and analysis.",
     url: "https://www.nycreport.org/",
+    
     siteName: "nycreport",
     images: [
       {
@@ -74,6 +75,7 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     site:"@nycreport_",
@@ -83,6 +85,7 @@ export const metadata: Metadata = {
     images:
       "https://www.nycreport.org/images/nyc-report-logo.webp",
   },
+    metadataBase: new URL("https://www.nycreport.org/"),
   alternates: {
     canonical: "https://www.nycreport.org/",
     languages: {
