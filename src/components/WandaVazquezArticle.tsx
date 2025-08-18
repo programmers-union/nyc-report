@@ -7,7 +7,7 @@ type Article = {
   description: string;
   image: string;
   slug: string;
-  author:string;
+  author?:string;
 };
 
 interface WandaVazquezArticleProps {
